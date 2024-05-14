@@ -4,9 +4,13 @@
 
 <h1>Fake Trains</h1>
 
+<div class="container">
+
+
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Company</th>
       <th scope="col">Departure Station</th>
       <th scope="col">Arrival Station</th>
@@ -22,6 +26,7 @@
   <tbody>
     @foreach ($trains as $train)
         <tr>
+            <th>{{ $train->id }}</th>
             <th>{{ $train->company }}</th>
             <td>{{ $train->departure_station }}</td>
             <td>{{ $train->arrival_station }}</td>
@@ -31,14 +36,14 @@
             <td>{{ $train->carriages_number }}</td>
             <td>{{ $train->is_in_time }}</td>
             <td>{{ $train->is_cancelled }}</td>
-
-
-
-
-
         </tr>
     @endforeach
   </tbody>
 </table>
+</div>
+
+<div class="container">
+    {{ $trains->links() }}
+</div>
 
 @endsection
