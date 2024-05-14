@@ -27,9 +27,6 @@ class TrainTableSeederFaker extends Seeder
             $new_train->is_in_time = $faker->boolean();
             $new_train->is_cancelled = $faker->boolean();
             $new_train->save();
-
-            dump($new_train);
-
         }
     }
 }
