@@ -25,7 +25,5 @@ class TrainsTableSeeder extends Seeder
         $new_train->is_in_time;
         $new_train->is_cancelled;
         $new_train->save();
-
-        dump($new_train);
     }
 }
